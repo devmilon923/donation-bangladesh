@@ -20,7 +20,6 @@ const noakhaliBtn = document.getElementById("noakhali-donation-button");
 const feniBtn = document.getElementById("feni-donation-button");
 const aidBtn = document.getElementById("aid-donation-button");
 
-
 // On singel funtion to calculate and show donate history
 function submitDonation(donationAmount, areaAmount, subject) {
   if (parseInt(donationAmount.value) < 0) return alert("Invalid Amount");
@@ -42,12 +41,13 @@ function submitDonation(donationAmount, areaAmount, subject) {
           </p>
         </div>
 `;
+    donationAmount.value = "";
   } else {
     alert("Insufficient balance");
   }
 }
 
-// Donate submit 
+// Donate submit
 noakhaliBtn.addEventListener("click", function () {
   submitDonation(noakhaliInput, donationAmount1, noakhaliTittle);
 });
@@ -58,8 +58,6 @@ feniBtn.addEventListener("click", function () {
 aidBtn.addEventListener("click", function () {
   submitDonation(aidInput, donationAmount3, aidTittle);
 });
-
-
 
 // Show and hide history and donation section
 historyButton.addEventListener("click", function () {
