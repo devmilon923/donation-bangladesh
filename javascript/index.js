@@ -30,7 +30,17 @@ function submitDonation(donationAmount, areaAmount, subject) {
       parseInt(myBalance.innerText) - parseInt(donationAmount.value);
     my_modal_1.showModal();
 
-
+    let date = Date();
+    historyTab.innerHTML += `
+        <div class="border p-8 rounded-md">
+          <h1 class="text--3xl font-bold">
+            ${donationAmount.value} Taka is Donated for ${subject}
+          </h1>
+          <p class="text-gray-500">
+            ${date}
+          </p>
+        </div>
+`;
   } else {
     alert("Invalid amount");
   }
