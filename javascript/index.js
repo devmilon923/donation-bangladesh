@@ -2,7 +2,8 @@ const historyButton = document.getElementById("history-button");
 const donationButton = document.getElementById("donation-button");
 const donationTab = document.getElementById("donation-tab");
 const historyTab = document.getElementById("history-tab");
-let myBalance = document.getElementById("my-balance");
+const myBalance = document.getElementById("my-balance");
+
 const donationAmount1 = document.getElementById("donation-amount-1");
 const donationAmount2 = document.getElementById("donation-amount-2");
 const donationAmount3 = document.getElementById("donation-amount-3");
@@ -19,11 +20,11 @@ const noakhaliBtn = document.getElementById("noakhali-donation-button");
 const feniBtn = document.getElementById("feni-donation-button");
 const aidBtn = document.getElementById("aid-donation-button");
 
+
+// On singel funtion to calculate and show donate history
 function submitDonation(donationAmount, areaAmount, subject) {
-  if (
-    parseInt(myBalance.innerText) >= parseInt(donationAmount.value) &&
-    parseInt(donationAmount.value) > 0
-  ) {
+  if (parseInt(donationAmount.value) < 0) return alert("Invalid Amount");
+  if (parseInt(myBalance.innerText) >= parseInt(donationAmount.value)) {
     areaAmount.innerText =
       parseInt(donationAmount.value) + parseInt(areaAmount.innerText);
     myBalance.innerText =
@@ -42,10 +43,11 @@ function submitDonation(donationAmount, areaAmount, subject) {
         </div>
 `;
   } else {
-    alert("Invalid amount");
+    alert("Insufficient balance");
   }
 }
 
+// Donate submit 
 noakhaliBtn.addEventListener("click", function () {
   submitDonation(noakhaliInput, donationAmount1, noakhaliTittle);
 });
@@ -57,6 +59,9 @@ aidBtn.addEventListener("click", function () {
   submitDonation(aidInput, donationAmount3, aidTittle);
 });
 
+
+
+// Show and hide history and donation section
 historyButton.addEventListener("click", function () {
   historyButton.classList.add("bg-lime-300", "focus:bg-lime-300");
   donationButton.classList.remove("bg-lime-300", "focus:bg-lime-300");
@@ -70,4 +75,9 @@ donationButton.addEventListener("click", function () {
   donationButton.classList.add("bg-lime-300", "focus:bg-lime-300");
   historyTab.classList.add("hidden");
   donationTab.classList.remove("hidden");
+});
+
+// Mobile manu responsive toggle
+document.getElementById("toggle-icon").addEventListener("click", function () {
+  document.getElementById("mobile-manu").classList.toggle("hidden");
 });

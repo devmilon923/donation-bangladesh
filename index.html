@@ -28,39 +28,6 @@
       body {
         font-family: "Roboto", system-ui;
       }
-      /* Custom DasyUi container */
-      /*
-      @media (max-width: 640px) {
-        .container {
-          width: 90% !important;
-        }
-      }
-      @media (min-width: 640px) {
-        .container {
-          max-width: 396px !important;
-        }
-      }
-      @media (min-width: 768px) {
-        .container {
-          max-width: 495px !important;
-        }
-      }
-      @media (min-width: 1024px) {
-        .container {
-          max-width: 752px !important;
-        }
-      }
-      @media (min-width: 1280px) {
-        .container {
-          max-width: 985px !important;
-        }
-      }
-      @media (min-width: 1536px) {
-        .container {
-          max-width: 1140px !important;
-        }
-      }
-      */
     </style>
   </head>
   <body>
@@ -85,7 +52,9 @@
 
               <div class="flex items-center justify-end gap-5 flex-1">
                 <img src="./assets/coin.png" alt="" />
-                <h1 class="lg:text-xl"><span id="my-balance">5500</span> BDT</h1>
+                <h1 class="lg:text-xl font-bold text-slate-700">
+                  <span id="my-balance">5500</span> BDT
+                </h1>
               </div>
               <div class="lg:hidden text-2xl pl-4" id="toggle-icon">
                 <i class="fa-solid fa-bars"></i>
@@ -98,23 +67,23 @@
             <img class="mx-auto" src="./assets/logo.png" alt="" />
             <h1 class="lg:text-2xl font-semibold">Donate Bangladesh</h1>
           </div>
-          <div class="flex items-center justify-center gap-2">
-       
-          </div>
+          <div class="flex items-center justify-center gap-2"></div>
         </div>
         <div>
           <div
             class="flex justify-center items-center backdrop-blur-md pt-5 md:pt-12 pb-4"
           >
             <div>
-              <button class="btn bg-lime-300" id="donation-button">Donation</button>
-              <button class="btn" id="history-button">History</button>
+              <button class="btn bg-lime-300 hover:bg-lime-400" id="donation-button">
+                Donation
+              </button>
+              <button class="btn hover:bg-lime-400" id="history-button">History</button>
             </div>
           </div>
         </div>
       </nav>
     </header>
-    <main class="container mx-auto px-4 pt-48 md:pt-56">
+    <main class="container mx-auto px-4 pt-52 md:pt-56">
       <section class="" id="donation-tab">
         <div
           class="border rounded-md grid grid-cols-1 md:grid-cols-2 justify-between items-center p-6 gap-12 mb-12"
@@ -127,19 +96,22 @@
               class="flex items-center max-w-40 gap-2 p-2 bg-gray-100 rounded-lg mb-4"
             >
               <img src="./assets/coin.png" alt="" />
-              <p><span id="donation-amount-1">5000</span> BDT</p>
+              <p class="font-bold">
+                <span id="donation-amount-1">10923</span> BDT
+              </p>
             </div>
 
-            <h1 class="text-bold text-3xl mb-4" id="noakhali-tittle">
+            <h1 class="font-bold text-xl lg:text-3xl mb-4" id="noakhali-tittle">
               Flood at Noakhali, Bangladesh
             </h1>
             <p class="text-gray-500 text-lg">
-              The recent floods in Noakhali have caused significant damage to
-              homes infrastructure. Your donation will help provide essential
-              supplies and to those affected by this disaster. Every
-              contribution, big or small, makes difference. Please join us in
-              supporting the relief efforts and making a positive impact on the
-              lives of those in need.
+              The flood situation in Noakhali has worsened due to continuous
+              rain and upstream water, leading many people to seek shelters.
+              However, space is unavailable in remote areas, forcing many to
+              live in waterlogged conditions. The flood situation further
+              deteriorated in the district town of Maizdi and in the Sadar
+              upazila. Meanwhile, residents have reported that relief is not
+              properly reaching many remote areas of the district.
             </p>
             <input
               type="number"
@@ -147,7 +119,14 @@
               id="noakhali-input"
               class="input input-bordered w-full mb-4 mt-12"
             />
-            <button class="btn w-full bg-lime-300 text-lg" id="noakhali-donation-button" >Donate Now</button>
+            <div class="text-center">
+              <button
+                class="btn bg-lime-300 text-md"
+                id="noakhali-donation-button"
+              >
+                Donate Now
+              </button>
+            </div>
           </div>
         </div>
 
@@ -162,19 +141,23 @@
               class="flex items-center max-w-40 gap-2 p-2 bg-gray-100 rounded-lg mb-4"
             >
               <img src="./assets/coin.png" alt="" />
-              <p><span id="donation-amount-2">5000</span> BDT</p>
+              <p class="font-bold">
+                <span id="donation-amount-2">5000</span> BDT
+              </p>
             </div>
 
-            <h1 class="text-bold text-3xl mb-4" id="feni-tittle">
+            <h1 class="font-bold text-xl lg:text-3xl mb-4" id="feni-tittle">
               Flood Relief in Feni, Bangladesh
             </h1>
             <p class="text-gray-500 text-lg">
-              The recent floods in Noakhali have caused significant damage to
-              homes infrastructure. Your donation will help provide essential
-              supplies and to those affected by this disaster. Every
-              contribution, big or small, makes difference. Please join us in
-              supporting the relief efforts and making a positive impact on the
-              lives of those in need.
+              Bangladesh Coast Guard is carrying out rescue and relief
+              operations for flood victims in Feni, it said in a press release
+              this morning. Lieutenant Commander Sabbir Alam Sujon, media
+              officer at the coast guard headquarters, said the coast guard was
+              working tirelessly to combat the unprecedented flood situation.
+              Feni's flood crisis, fueled by runoff from India and relentless
+              rainfall, has marooned at least 3,50,000 people in three upazilas
+              -- Fulgazi, Parshuram
             </p>
             <input
               type="number"
@@ -182,7 +165,11 @@
               id="feni-input"
               class="input input-bordered w-full mb-4 mt-12"
             />
-            <button class="btn w-full bg-lime-300 text-lg" id="feni-donation-button" >Donate Now</button>
+            <div class="text-center">
+              <button class="btn bg-lime-300 text-md" id="feni-donation-button">
+                Donate Now
+              </button>
+            </div>
           </div>
         </div>
 
@@ -197,19 +184,21 @@
               class="flex items-center max-w-40 gap-2 p-2 bg-gray-100 rounded-lg mb-4"
             >
               <img src="./assets/coin.png" alt="" />
-              <p><span id="donation-amount-3">5000</span> BDT</p>
+              <p class="font-bold">
+                <span id="donation-amount-3">6000</span> BDT
+              </p>
             </div>
 
-            <h1 class="text-bold text-3xl mb-4" id="aid-tittle">
+            <h1 class="font-bold text-xl lg:text-3xl mb-4" id="aid-tittle">
               Aid for Injured in the Quota Movement
             </h1>
             <p class="text-gray-500 text-lg">
-              The recent floods in Noakhali have caused significant damage to
-              homes infrastructure. Your donation will help provide essential
-              supplies and to those affected by this disaster. Every
-              contribution, big or small, makes difference. Please join us in
-              supporting the relief efforts and making a positive impact on the
-              lives of those in need.
+              Timely medical treatment can mean the difference between life and
+              death, and whether an individual suffers permanent disability. We
+              have seen reports of protesters succumbing to injuries after
+              fighting for their lives for days. This leads us to wonder whether
+              the lack of financial support for treatment contributed to these
+              tragic outcomes. In several instances, individuals have suffered permanent disabilities, such as loss of vision or the need for amputations, owing to not being able to afford necessary medical procedures on time.
             </p>
             <input
               type="number"
@@ -217,28 +206,28 @@
               class="input input-bordered w-full mb-4 mt-12"
               id="aid-input"
             />
-            <button class="btn w-full bg-lime-300 text-lg" id="aid-donation-button" >Donate Now</button>
+            <div class="text-center">
+              <button class="btn bg-lime-300 text-md" id="aid-donation-button">
+                Donate Now
+              </button>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="space-y-3 hidden" id="history-tab">
-      
-
-      
-      </section>
+      <section class="space-y-3 hidden" id="history-tab"></section>
     </main>
 
     <!-- Open the modal using ID.showModal() method -->
 
     <dialog id="my_modal_1" class="modal">
-      <div class="modal-box text-center ">
+      <div class="modal-box text-center">
         <h3 class="text-3xl font-bold">Congrates!</h3>
-        <img class="mx-auto mt-4 w-16" src="./assets/coin.png" alt="">
+        <img class="mx-auto mt-4 w-16" src="./assets/coin.png" alt="" />
         <p class="py-4 text-gray-500">You Have Donated for Humankind</p>
         <h3 class="text-xl font-bold">Successfully!</h3>
 
-        <div class="modal-action ">
+        <div class="modal-action">
           <form method="dialog" class="mx-auto">
             <!-- if there is a button in form, it will close the modal -->
             <button class="btn">close confirmation</button>

@@ -28,39 +28,7 @@
       body {
         font-family: "Roboto", system-ui;
       }
-      /* Custom DasyUi container */
-      /*
-      @media (max-width: 640px) {
-        .container {
-          width: 90% !important;
-        }
-      }
-      @media (min-width: 640px) {
-        .container {
-          max-width: 396px !important;
-        }
-      }
-      @media (min-width: 768px) {
-        .container {
-          max-width: 495px !important;
-        }
-      }
-      @media (min-width: 1024px) {
-        .container {
-          max-width: 752px !important;
-        }
-      }
-      @media (min-width: 1280px) {
-        .container {
-          max-width: 985px !important;
-        }
-      }
-      @media (min-width: 1536px) {
-        .container {
-          max-width: 1140px !important;
-        }
-      }
-      */
+  
     </style>
   </head>
   <body>
@@ -85,7 +53,7 @@
 
               <div class="flex items-center justify-end gap-5 flex-1">
                 <img src="./assets/coin.png" alt="" />
-                <h1 class="lg:text-xl">
+                <h1 class="lg:text-xl font-bold text-slate-700">
                   <span id="my-balance">5500</span> BDT
                 </h1>
               </div>
@@ -111,7 +79,7 @@
       </h1>
       <div class="bg-gray-50">
         <div class="p-7 cursor-pointer rounded-md border-b">
-          <dt class="flex items-center justify-between" aria-controls="faq-1">
+          <dt class="flex items-center gap-3 justify-between" aria-controls="faq-1">
             <p class="font-semibold text-lg">
               What is the Document Object Model (DOM)?
             </p>
@@ -127,7 +95,7 @@
         </div>
 
         <div class="p-7 cursor-pointer rounded-md border-b">
-          <dt class="flex items-center justify-between" aria-controls="faq-2">
+          <dt class="flex items-center gap-3 justify-between" aria-controls="faq-2">
             <p class="font-semibold text-lg">
               How do you select an element from the DOM?
             </p>
@@ -136,17 +104,17 @@
           <dd id="faq-2" class="text-gray-500 hidden text-lg mt-4">
             <p class="">
               Using JavaScript, there are a few ways to select DOM elements.
-              Three of the most commonly used methods are as follows:
-              getElementsByClassName, getElementsByTagName, and getElementById.
+              Three of the most commonly used methods are as follows: <br>
+              getElementsByClassName,<br> getElementsByTagName,<br>  getElementById. <br>
               You will be able to reach any HTML tag, class, or ID element with
-              these selectors. You can use querySelectorAll also- it will enable
+              these selectors. You can use <br>querySelectorAll also- it will enable
               you to select elements by ID, class, or tag all in one method.
             </p>
           </dd>
         </div>
 
         <div class="p-7 cursor-pointer rounded-md border-b">
-          <dt class="flex items-center justify-between" aria-controls="faq-3">
+          <dt class="flex items-center gap-3 justify-between" aria-controls="faq-3">
             <p class="font-semibold text-lg">
               What is event delegation in the context of the DOM, and why is it
               useful?
@@ -162,7 +130,7 @@
         </div>
 
         <div class="p-7 cursor-pointer rounded-md border-b">
-          <dt class="flex items-center justify-between" aria-controls="faq-4">
+          <dt class="flex items-center gap-3 justify-between" aria-controls="faq-4">
             <p class="font-semibold text-lg">
               How do you manipulate an element's attributes and styles using
               DOM?
