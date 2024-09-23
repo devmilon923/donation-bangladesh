@@ -85,7 +85,7 @@
 
               <div class="flex items-center justify-end gap-5 flex-1">
                 <img src="./assets/coin.png" alt="" />
-                <h1 class="lg:text-2xl">5500 BDT</h1>
+                <h1 class="lg:text-2xl"><span id="my-balance">5500</span> BDT</h1>
               </div>
               <div class="lg:hidden text-2xl pl-4" id="toggle-icon">
                 <i class="fa-solid fa-bars"></i>
@@ -125,14 +125,14 @@
           </div>
           <div>
             <div
-              class="flex items-center w-36 gap-2 p-2 bg-gray-100 rounded-lg mb-4"
+              class="flex items-center max-w-40 gap-2 p-2 bg-gray-100 rounded-lg mb-4"
             >
               <img src="./assets/coin.png" alt="" />
-              <p><span>5000</span> BDT</p>
+              <p><span id="donation-amount-1">5000</span> BDT</p>
             </div>
 
-            <h1 class="text-bold text-3xl mb-4">
-              Donate for Flood at Noakhali, Bangladesh
+            <h1 class="text-bold text-3xl mb-4" id="noakhali-tittle">
+              Flood at Noakhali, Bangladesh
             </h1>
             <p class="text-gray-500 text-lg">
               The recent floods in Noakhali have caused significant damage to
@@ -143,11 +143,12 @@
               lives of those in need.
             </p>
             <input
-              type="text"
+              type="number"
               placeholder="Donation Amount..."
+              id="noakhali-input"
               class="input input-bordered w-full mb-4 mt-12"
             />
-            <button class="btn w-full bg-lime-300 text-xl" onclick="my_modal_1.showModal()">Donate Now</button>
+            <button class="btn w-full bg-lime-300 text-xl" id="noakhali-donation-button" >Donate Now</button>
           </div>
         </div>
 
@@ -159,14 +160,14 @@
           </div>
           <div>
             <div
-              class="flex items-center w-36 gap-2 p-2 bg-gray-100 rounded-lg mb-4"
+              class="flex items-center max-w-40 gap-2 p-2 bg-gray-100 rounded-lg mb-4"
             >
               <img src="./assets/coin.png" alt="" />
-              <p><span>5000</span> BDT</p>
+              <p><span id="donation-amount-2">5000</span> BDT</p>
             </div>
 
-            <h1 class="text-bold text-3xl mb-4">
-              Donate for Flood at Noakhali, Bangladesh
+            <h1 class="text-bold text-3xl mb-4" id="feni-tittle">
+              Flood Relief in Feni, Bangladesh
             </h1>
             <p class="text-gray-500 text-lg">
               The recent floods in Noakhali have caused significant damage to
@@ -177,11 +178,12 @@
               lives of those in need.
             </p>
             <input
-              type="text"
+              type="number"
               placeholder="Donation Amount..."
+              id="feni-input"
               class="input input-bordered w-full mb-4 mt-12"
             />
-            <button class="btn w-full bg-lime-300 text-xl" onclick="my_modal_1.showModal()">Donate Now</button>
+            <button class="btn w-full bg-lime-300 text-xl" id="feni-donation-button" >Donate Now</button>
           </div>
         </div>
 
@@ -193,14 +195,14 @@
           </div>
           <div>
             <div
-              class="flex items-center w-36 gap-2 p-2 bg-gray-100 rounded-lg mb-4"
+              class="flex items-center max-w-40 gap-2 p-2 bg-gray-100 rounded-lg mb-4"
             >
               <img src="./assets/coin.png" alt="" />
-              <p><span>5000</span> BDT</p>
+              <p><span id="donation-amount-3">5000</span> BDT</p>
             </div>
 
-            <h1 class="text-bold text-3xl mb-4">
-              Donate for Flood at Noakhali, Bangladesh
+            <h1 class="text-bold text-3xl mb-4" id="aid-tittle">
+              Aid for Injured in the Quota Movement
             </h1>
             <p class="text-gray-500 text-lg">
               The recent floods in Noakhali have caused significant damage to
@@ -211,41 +213,20 @@
               lives of those in need.
             </p>
             <input
-              type="text"
+              type="number"
               placeholder="Donation Amount..."
               class="input input-bordered w-full mb-4 mt-12"
+              id="aid-input"
             />
-            <button class="btn w-full bg-lime-300 text-xl" onclick="my_modal_1.showModal()">Donate Now</button>
+            <button class="btn w-full bg-lime-300 text-xl" id="aid-donation-button" >Donate Now</button>
           </div>
         </div>
       </section>
 
       <section class="space-y-3 hidden" id="history-tab">
-        <div class="border p-8 rounded-md">
-          <h1 class="text--3xl font-bold">
-            96500 Taka is Donated for famine-2024 at Feni, Bangladesh
-          </h1>
-          <p class="text-gray-500">
-            Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
-          </p>
-        </div>
+      
 
-        <div class="border p-8 rounded-md">
-          <h1 class="text--3xl font-bold">
-            96500 Taka is Donated for famine-2024 at Feni, Bangladesh
-          </h1>
-          <p class="text-gray-500">
-            Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
-          </p>
-        </div>
-        <div class="border p-8 rounded-md">
-          <h1 class="text--3xl font-bold">
-            96500 Taka is Donated for famine-2024 at Feni, Bangladesh
-          </h1>
-          <p class="text-gray-500">
-            Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
-          </p>
-        </div>
+      
       </section>
     </main>
 
